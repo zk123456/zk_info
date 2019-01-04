@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>zk_info</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+    <groupId>com.jdd</groupId>
+  <name>zk_info</name>
+	<properties>
+		<MAVEN_OPTS>-Xmx512m</MAVEN_OPTS>
+		<project.environment>1.0-SNAPSHOT</project.environment>
+		<package.environment>dev</package.environment>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <distribution.repository.url>http://172.16.248.113:8081/repository</distribution.repository.url>
+	</properties>
+	<modules>
+		<module>zk_info_api_service</module>
+		<module>zk_info_api</module>
+	</modules>
+  <!--<parent>
+		<groupId>com.jdd</groupId>
+		<artifactId>jdd_parent</artifactId>
+		<version>2.0.0-SNAPSHOT</version>
+	</parent>-->
+
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>${distribution.repository.url}/maven-snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <url>${distribution.repository.url}/maven-releases</url>
+        </repository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>utf8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
