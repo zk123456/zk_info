@@ -1,0 +1,2 @@
+org.springframework.context.ApplicationListener=com.eventfilter.ApplicationStartingEventListener,com.eventfilter.ApplicationPreparedEventListener,\
+  com.eventfilter.ApplicationStartedEventListener,com.eventfilter.ApplicationReadyEventListener

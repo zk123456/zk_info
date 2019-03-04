@@ -1,0 +1,6 @@
+1.静态资源springboot 默认目录配置
+/static
+/public
+/resources
+/META-INF/resources
+例子:http://localhost:8080/1.png

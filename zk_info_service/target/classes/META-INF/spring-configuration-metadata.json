@@ -1,0 +1,47 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.chapter.Info",
+      "name": "",
+      "type": "com.chapter.Info"
+    },
+    {
+      "sourceType": "com.chapter.Properties2",
+      "name": "spring.database",
+      "type": "com.chapter.Properties2"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.chapter.Info",
+      "name": "content",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.chapter.Properties2",
+      "name": "spring.database.desc",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.chapter.Properties2",
+      "name": "spring.database.info",
+      "type": "java.util.List<com.chapter.Info>"
+    },
+    {
+      "sourceType": "com.chapter.Properties2",
+      "name": "spring.database.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.chapter.Properties2",
+      "name": "spring.database.title",
+      "type": "java.util.List<java.lang.String>"
+    },
+    {
+      "sourceType": "com.chapter.Info",
+      "name": "title",
+      "type": "java.lang.String"
+    }
+  ]
+}

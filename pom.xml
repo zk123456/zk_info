@@ -5,26 +5,29 @@
   <artifactId>zk_info</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
-    <groupId>com.j</groupId>
+    <groupId>com.jdd</groupId>
   <name>zk_info</name>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.5.RELEASE</version>
+    </parent>
+
 	<properties>
 		<MAVEN_OPTS>-Xmx512m</MAVEN_OPTS>
+        <spring.version>4.3.2.RELEASE</spring.version>
 		<project.environment>1.0-SNAPSHOT</project.environment>
 		<package.environment>dev</package.environment>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <distribution.repository.url>http://{url}/repository</distribution.repository.url>
+        <distribution.repository.url>http://172.16.248.113:8081/repository</distribution.repository.url>
 	</properties>
 	<modules>
 		<module>zk_info_api_service</module>
 		<module>zk_info_api</module>
-	</modules>
-  <!--<parent>
-		<groupId>com.j</groupId>
-		<artifactId>jdd_parent</artifactId>
-		<version>2.0.0-SNAPSHOT</version>
-	</parent>-->
-
+        <module>zk_info_service</module>
+    </modules>
 
     <distributionManagement>
         <snapshotRepository>
@@ -60,6 +63,10 @@
                     <target>1.8</target>
                     <encoding>utf8</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
