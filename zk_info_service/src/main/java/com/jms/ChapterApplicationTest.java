@@ -1,7 +1,6 @@
-package com.test;
+package com.jms;
 
 import com.ChapterApplication;
-import com.chapter.BlogProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,19 +13,24 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @Description
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-/**
- * SpringApplicationConfiguration 1.*的版本有这个注解  之后新的版本去掉了
- * 用SpringBootTest 代替
- */
 @SpringBootTest(classes = ChapterApplication.class)
 public class ChapterApplicationTest {
 
     @Autowired
-    private BlogProperties blogProperties;
+    private Producer producer;
+    @Autowired
+    private Producer2 producer2;
 
     @Test
     public void test1() {
-        System.out.println("============属性注入===========");
-        //System.out.println(blogProperties.getNumber());
+        //点对点
+        producer.send("test", "******************");
     }
+
+    @Test
+    public void test2() {
+        //发布订阅模式
+        producer2.send("test2", "******************");
+    }
+
 }

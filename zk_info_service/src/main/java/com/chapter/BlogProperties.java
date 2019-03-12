@@ -25,8 +25,6 @@ public class BlogProperties {
 
     @Value("${com.didispace.blog.value}")
     private String value;
-    @Value("${com.didispace.blog.number}")
-    private Integer number;
 
     public String getName() {
         return name;
@@ -58,13 +56,5 @@ public class BlogProperties {
 
     public void setValue(String value) {
         this.value = value;
-    }
-
-    public Integer getNumber() {
-        return number;
-    }
-
-    public void setNumber(Integer number) {
-        this.number = number;
     }
 }

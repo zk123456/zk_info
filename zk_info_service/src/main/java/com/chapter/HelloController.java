@@ -31,7 +31,7 @@ public class HelloController {
         System.out.println(blogProperties.getTitle());
         System.out.println(blogProperties.getDesc());
         System.out.println(blogProperties.getValue());
-        System.out.println(blogProperties.getNumber());
+        //System.out.println(blogProperties.getNumber());
         return "hello spring boot";
     }
 
@@ -87,5 +87,11 @@ public class HelloController {
         dto.setName("aaa");
         dto.setBirthday(LocalDate.now());
         return dto;
+    }
+
+    @RequestMapping("/e3")
+    @ResponseBody
+    public String hello3(String name) throws Exception{
+        return "hello" + name;
     }
 }

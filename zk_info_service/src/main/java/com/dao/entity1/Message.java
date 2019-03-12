@@ -1,32 +1,25 @@
-package com.dao.entity;
+package com.dao.entity1;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 /**
- * @Author Zhangk
- * @Date 16:06 2019/2/28
- * @Description
+ * @author zk
+ * @Date 19:58 2019/3/4
  */
 @Entity
-@Table(name = "temp_user")
-public class User implements Serializable{
-
+@Table(name = "temp_message")
+public class Message {
     private Long id;
 
     private String name;
 
-    public User(Long id, String name) {
+    public Message(Long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public User() {
+    public Message() {
         super();
-    }
-
-    public User(String name) {
-        this.name = name;
     }
 
     @Id
